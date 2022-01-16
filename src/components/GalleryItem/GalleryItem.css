@@ -1,0 +1,25 @@
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.imgDiv {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    background-color: #dddddd;
+    text-align: center;
+}
+
+.itemDiv {
+    padding-top: 20px;
+    height: 180px;
+    width: 180px;
+    text-align: center;
+    border: 1pt solid black;
+}
+
+button {
+    height: 30px;
+    width: 60px;
+}
