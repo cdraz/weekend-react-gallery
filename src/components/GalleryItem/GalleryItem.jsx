@@ -6,3 +6,5 @@ function GalleryItem({item}) {
         </>
     )
 }
+
+export default GalleryItem;

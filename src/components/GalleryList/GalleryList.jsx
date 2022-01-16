@@ -1,13 +1,16 @@
 import './GalleryList.css';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList({galleryList}) {
+function GalleryList({list}) {
     return(
         <>
         {
-            galleryList.map(item => (
+            list.map(item => (
                 <GalleryItem key={item.id} item={item} />
             ))
         }
         </>
     )
 }
+
+export default GalleryList;
