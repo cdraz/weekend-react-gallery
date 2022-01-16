@@ -1,15 +1,19 @@
 import './GalleryList.css';
 import GalleryItem from '../GalleryItem/GalleryItem';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 function GalleryList({list, likeGalleryItem}) {
     return(
-        <>
+        <ImageList sx={{ width: 1000, height: 800 }} className="list">
         {
             list.map(item => (
-                <GalleryItem key={item.id} item={item} likeGalleryItem={likeGalleryItem}/>
+                <ImageListItem key={item.id}>
+                    <GalleryItem key={item.id} item={item} likeGalleryItem={likeGalleryItem}/>
+                </ImageListItem>
             ))
         }
-        </>
+        </ImageList>
     )
 }
 

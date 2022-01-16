@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import 'react-bootstrap/dist/react-bootstrap.min'
 import GalleryList from '../GalleryList/GalleryList';
+import Header from '../Header/Header';
 
 function App() {
   
@@ -50,9 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="App-title">Gallery of My Life</h1>
-      </header>
+      <Header className="App-header"/>
       <GalleryList list={galleryList} likeGalleryItem={likeGalleryItem}/>
     </div>
   );

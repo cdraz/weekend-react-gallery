@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import './GalleryItem.css';
+import Button from '@mui/material/Button';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 function GalleryItem({item, likeGalleryItem}) {
 
@@ -20,12 +23,14 @@ function GalleryItem({item, likeGalleryItem}) {
         <div className="itemDiv">
             <div className="imgDiv" onClick={toggleDescription}>
                 { 
-                    showDescription ? <p>{item.description}</p> :
+                    showDescription ? <p className="desc">{item.description}</p> :
                     <img src={item.path} alt={item.description} />
                 }
             </div>
-            <button onClick={onLike}>Like</button>
-            <p>{item.likes} Likes</p>
+        <div className="likesDiv">
+                <Button variant="outlined" onClick={onLike}>Like</Button>
+                <p className="likes">{item.likes} Likes</p>
+            </div>
         </div>
     )
 }
