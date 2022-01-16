@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem';
 
 function App() {
   
@@ -11,6 +10,7 @@ function App() {
 
   // Declare getGallery
   const getGallery = () => {
+    console.log('in getGallery');
     axios({
       method: 'GET',
       url: '/gallery'
@@ -27,14 +27,11 @@ function App() {
   } 
 
   // Declare likeGalleryItem
-  const likeGalleryItem = ({item}) => {
-    console.log('in likeGalleryItem');
+  function likeGalleryItem(item) {
+    console.log('in likeGalleryItem in App.jsx');
     axios({
       method: 'PUT',
       url: `/gallery/like/${item.id}`,
-      data: {
-        likes: item.likes + 1
-      }
     })
     .then( res => {
       console.log('like PUT success');
@@ -44,10 +41,10 @@ function App() {
       console.error('like PUT failed: ', err);
     });
   }
-  
+
   // On component load, run getGallery
   useEffect( () => {
-    getGallery();
+    getGallery()
   }, [] );
 
   return (
@@ -55,7 +52,7 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryList list={galleryList} />
+      <GalleryList list={galleryList} likeGalleryItem={likeGalleryItem}/>
     </div>
   );
 }
