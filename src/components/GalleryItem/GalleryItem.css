@@ -1,11 +1,11 @@
 img {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
 }
 
 .imgDiv {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     margin: 0 auto;
     background-color: #dddddd;
     text-align: center;
@@ -13,13 +13,20 @@ img {
 
 .itemDiv {
     padding-top: 20px;
-    height: 180px;
-    width: 180px;
+    height: 280px;
+    width: 280px;
     text-align: center;
-    border: 1pt solid black;
 }
 
-button {
-    height: 30px;
-    width: 60px;
+.desc {
+    position: relative;
+}
+
+.likesDiv {
+    display: inline-flex;
+    margin-top: 10px;
+}
+
+p {
+    margin-left: 20px;
 }
