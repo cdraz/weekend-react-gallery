@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './GalleryItem.css';
 
 function GalleryItem({item, likeGalleryItem}) {
@@ -6,18 +7,25 @@ function GalleryItem({item, likeGalleryItem}) {
         console.log('in onLike, ID of img: ', item.id);
         likeGalleryItem(item);
     }
-    // const toggleDescription = () =>{
 
-    // }
+    // Set variable for toggle description and declare function
+    const [ showDescription, setShowDescription ] = useState(false);
+    const toggleDescription = () => {
+        console.log('in toggleDescription');
+        setShowDescription(!showDescription);
+        console.log('showDescription is now: ', showDescription);
+    }
 
     return(
         <div className="itemDiv">
-            <div className="imgDiv">
-                <img src={item.path} alt={item.description} />
+            <div className="imgDiv" onClick={toggleDescription}>
+                { 
+                    showDescription ? <p>{item.description}</p> :
+                    <img src={item.path} alt={item.description} />
+                }
             </div>
             <button onClick={onLike}>Like</button>
             <p>{item.likes} Likes</p>
-
         </div>
     )
 }

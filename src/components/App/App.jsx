@@ -27,7 +27,7 @@ function App() {
   } 
 
   // Declare likeGalleryItem
-  function likeGalleryItem(item) {
+  const likeGalleryItem = item => {
     console.log('in likeGalleryItem in App.jsx');
     axios({
       method: 'PUT',

@@ -1,10 +1,10 @@
-[ ] Set up server side images and objects
+[x] Set up server side images and objects
 
 [ ] Components:
- [ ] GalleryList
- [ ] GalleryItem
-    [ ] Image
+ [x] GalleryList
+ [x] GalleryItem
+    [x] Image
     [ ] Description when image is clicked (conditional rendering)
-    [ ] Like button (PUT)
-    [ ] Number of likes
+    [x] Like button (PUT)
+    [x] Number of likes
 
