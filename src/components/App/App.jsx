@@ -26,6 +26,25 @@ function App() {
       });
   } 
 
+  // Declare likeGalleryItem
+  const likeGalleryItem = ({item}) => {
+    console.log('in likeGalleryItem');
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${item.id}`,
+      data: {
+        likes: item.likes + 1
+      }
+    })
+    .then( res => {
+      console.log('like PUT success');
+      getGallery();
+    })
+    .catch( err => {
+      console.error('like PUT failed: ', err);
+    });
+  }
+  
   // On component load, run getGallery
   useEffect( () => {
     getGallery();
