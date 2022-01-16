@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import 'react-bootstrap/dist/react-bootstrap.min'
 import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
