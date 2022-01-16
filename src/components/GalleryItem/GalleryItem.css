@@ -19,7 +19,8 @@ img {
 }
 
 .desc {
-    position: relative;
+    text-align: justify;
+    word-wrap: break-word;
 }
 
 .likesDiv {
@@ -27,6 +28,7 @@ img {
     margin-top: 10px;
 }
 
-p {
+.likes {
     margin-left: 20px;
 }
+

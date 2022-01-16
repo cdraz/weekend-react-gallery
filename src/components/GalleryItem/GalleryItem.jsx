@@ -29,7 +29,7 @@ function GalleryItem({item, likeGalleryItem}) {
             </div>
         <div className="likesDiv">
                 <Button variant="outlined" onClick={onLike}>Like</Button>
-                <p>{item.likes} Likes</p>
+                <p className="likes">{item.likes} Likes</p>
             </div>
         </div>
     )

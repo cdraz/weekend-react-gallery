@@ -1,12 +1,13 @@
 .App {
   text-align: center;
+  font-family: Andale mono, monospace;
 }
 
 .App-header {
-  background-color: #222;
   padding: 1em;
   color: white;
   margin-bottom: 1em;
+  position: fixed;
 }
 
 .App-title {
